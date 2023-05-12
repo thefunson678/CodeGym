@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập tạo Form đơn giản</title>
+    <style>
+        .form{
+            font: "Times New Roman"
+        }
+    </style>
+</head>
+<body>
+<h1 style="font-size: 40px; color: white; background: red; text-align: center; padding-top: 5px">SỞ THÍCH CỦA BẠN</h1>
+<form  action="" name="mylike" method="POST" style="position: absolute ;left: 37%">
+    <label style="color: blue; font-size: 20px;text-align: left">Họ và Tên </label>
+    <input type="text" id="leftname" name="fullname" style="font-size: 20px; position: absolute ; left: 100px"/>
+    <br>
+    <br>
+    <label style="color: blue; font-size: 20px; text-align: left">Email </label>
+    <input type="email" name="yourmail" style="font-size: 20px; position: absolute ; left: 100px"/>
+        <br>
+        <br>
+    <label style="color: blue; font-size: 20px">Sở thích </label>
+    <div style="position: relative; left: 30px; float: right ">
+    <label><input type="checkbox" name="ylike" value=" Thể thao"/> Thể thao</label>
+    <label>&nbsp<input type="checkbox" name="ylike" value=" Âm nhạc"/> Âm nhạc</label>
+    <label>&nbsp<input type="checkbox" name="ylike" value=" ĐỌc sách"/> Đọc sách</label>
+    <br>
+    <br>
+    <label><input type="checkbox" class="ylike" value=" Lướt web"/> Thể thao</label>
+    <label>&nbsp<input type="checkbox" name="ylike" value=" Chơi game"/> Âm nhạc</label>
+    <label>&nbsp<input type="checkbox" name="ylike" value=" Điện ảnh"/> Đọc sách</label>
+    <br>
+    <br>
+    <label><input type="checkbox" class="ylike" value=" Du lịch"/> Thể thao</label>
+    </div>
+    <div>
+        <input type="submit" name="submit" value="Lưu thông tin" style="position: relative; left: 100px; top: 10px">
+        &nbsp;
+        <input type="reset" name="reset" value="Nhập lại" style="position: relative; left: 100px; top: 10px";>
+    </div>
+
+</form>
+</body>
+</html>

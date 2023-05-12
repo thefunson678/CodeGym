@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learning Register</title>
+    <style>
+        label{
+            font-size: 20px;
+            display: inline-block;
+            width: 90px;
+
+        }
+        input{
+            font-size: 20px;
+        }
+        select{
+            font-size: 20px;
+            font-family: "Times New Roman";
+        }
+    </style>
+
+</head>
+<body>
+<center>
+<form action="register" name="studentreg" method="get" style=" width: 400px; height: 470px; background: goldenrod">
+    <fieldset>
+        <legend style="text-align: center;">Register Form</legend>
+        <table style="width: 370px; background-color: aquamarine">
+            <tr><td style="font-size: 25px;color: blue;text-align: center"><strong>CREATE AN ACCOUNT</strong></td></tr>
+        </table>
+        <br>
+        <div style="text-align: left"  >
+            <label>Full name</label>
+            <input type="text" name="Full name"><br><br>
+            <label>Birthday</label>
+            <input type="text" name="Birthday"><br>
+            <br>
+            <label>Giới tính</label>
+            <label><input type="radio" name="gioitinh"> Nam</label>
+            <label><input type="radio" name="gioitinh"> Nữ</label>
+            <br>
+            <br>
+
+            <div style="display: flex">
+                <div style="align-items: center">
+                    <label  class="test">Địa chỉ</label>
+                </div>
+                <textarea style="width: 260px;height: 50px"></textarea>
+            </div>
+            <br>
+            <label>Class</label>
+            <select id="Class" style="width: 260px">
+                <option value="Select">- Chosee one class -</option>
+                <option value="Class 1A">Class 1A</option>
+                <option value="Class 1A">Class 1B</option>
+                <option value="Class 1A">Class 2A</option>
+            </select>
+            <br>
+            <br>
+            <label>Email</label>
+            <input type="email" name="email">
+            <br>
+            <br>
+            <label>Phone</label>
+            <input type="tel" name="Telephone">
+            <br>
+            <br>
+            <div style="text-align: center">
+                <input type="submit" name="submit" value="Register">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="Reset" name="reset" value="Reset">
+            </div>
+        </div>
+    </fieldset>
+</form>
+</center>
+</body>
+</html>
