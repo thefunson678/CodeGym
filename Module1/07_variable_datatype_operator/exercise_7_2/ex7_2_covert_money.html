@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Covert Money</title>
+</head>
+<style>
+    select{
+        width: 150px;
+        height: 30px;
+        text-align: center;
+        display: float;
+    }
+    input{
+        width: 150px;
+        height: 25px;
+        text-align: center;
+        display: float;
+        font-weight: bold;
+    }
+    label{
+        width: 150px;
+        font-size: 20px;
+        text-align: center;
+    }
+</style>
+<body>
+<label style="position: absolute;left  : 10px">Amount</label>
+<label style="position: absolute;left  : 170px">From Currency</label>
+<label style="position: absolute;left  : 330px">To Currency</label>
+<br>
+<br>
+<input type="number" id="num1"></input>
+<select id="cover1">
+    <option id="1" value="VietNam">VietNam</option>
+    <option id="2" value="USD">USD</option>
+</select>
+<select id="cover2">
+    <option id="3" value="VietNam">VietNam</option>
+    <option id="4" value="USD">USD</option>
+</select>
+<button onclick="Cover()" style="height:30px;width: 100px; background-color:cadetblue">Covert</button>
+<script>
+    function Cover() {
+        let num1 = document.getElementById("num1").value;
+        let  val1 = document.getElementById("cover1").value;
+        let  val2 = document.getElementById("cover2").value;
+        const rate_usdvnd = 23500;
+        let resurt;
+        if (val1 == val2){
+            if (val1 =="VietNam") { alert("Kết quả là " + num1 + "vnd") };
+            if (val1 =="USD") { alert("Kết quả là " + num1 + "usd") };
+        } else if(val1 == "VietNam") {
+            resurt=Number(num1) / rate_usdvnd;
+            alert("Kết quả là " + resurt + "usd");
+        }else {
+            resurt=Number(num1)*rate_usdvnd;
+            alert("Kết quả là " + resurt + "vnđ");
+        }
+    }
+</script>
+</body>
+</html>

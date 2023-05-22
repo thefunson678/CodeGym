@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính toán máy tính</title>
+</head>
+<body>
+<input type="number" id="num1" value="Số thứ 1">
+
+<input type="number" id="num2" value="Số thứ 2">
+<br>
+<br>
+<button type="button" onclick="cong1()">Addition(+)</button>
+<button type="button" onclick="tru()">Subtraction(-)</button>
+<button type="button" onclick="nhan()">Multiplication(X)</button>
+<button type="button" onclick="chia()" >Division(/)</button>
+<script>
+    function cong1() {
+       let input1 = document.getElementById("num1").value;
+       let input2 = document.getElementById("num2").value;
+       let val1 ;
+        val1 =Number(input1)+Number(input2);
+       alert("Ket quả là " + val1);
+    };
+    function tru() {
+        let input1 = document.getElementById("num1").value;
+        let input2 = document.getElementById("num2").value;
+        let val1 ;
+        val1 =Number(input1)-Number(input2);
+        alert("Ket quả là " + val1);
+    };
+    function nhan() {
+        let input1 = document.getElementById("num1").value;
+        let input2 = document.getElementById("num2").value;
+        let val1 ;
+        val1 =Number(input1)*Number(input2);
+        alert("Ket quả là " + val1);
+    };
+    function chia() {
+        let input1 = document.getElementById("num1").value;
+        let input2 = document.getElementById("num2").value;
+        let val1 ;
+        val1 =Number(input1)/Number(input2);
+        alert("Ket quả là " + val1);
+    };
+</script>
+</body>
+</html>
