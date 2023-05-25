@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp loại học lực</title>
+</head>
+<style>
+    input{
+        position: absolute;
+        left: 220px;
+        width: 50px;
+    }
+</style>
+<body>
+<label><strong>NHẬP ĐẦY ĐỦ CÁC CỘT ĐIỂM SAU:</strong></label>
+<br>
+<br>
+<label>Điểm kiểm tra 15 phút (hệ số 1)</label>
+<input  type="number" id="m15">
+<br>
+<br>
+<label>Điểm kiểm tra 1 tiết (hệ số 1)</label>
+<input  type="number" id="m60">
+<br>
+<br>
+<label>Điểm kiểm tra giữa (hệ số 2)</label>
+<input  type="number" id="m90">
+<br>
+<br>
+<label>Điểm kiểm tra cuối kỳ (hệ số 3)</label>
+<input  type="number" id="m180">
+<br>
+<br>
+<button type="button" onclick="yourrank()">Xem kết quả</button>
+<script>
+    function yourrank() {
+        let a=document.getElementById("m15").value;
+        let b=document.getElementById("m60").value;
+        let c=document.getElementById("m90").value;
+        let d=document.getElementById("m180").value;
+        let diemtb = (a*1 + b*1 *c*2 +d*3)/7;
+        if (diemtb < 5 ) {
+            alert("Học lực Yếu!");
+        } else if (diemtb >=5 && diemtb < 6.5) {
+            alert("Học lực Trung bình!");
+        } else if (diemtb>=6.5 && diemtb <8) {
+            alert("Học lực Khá!");
+        } else if (diemtb>=8 && diemtb <9) {
+            alert("Học lực Giỏi!");
+        } else if (diemtb>9) {
+            alert("Học lực Xuất Sắc!");
+        }
+    }
+
+</script>
+</body>
+</html>

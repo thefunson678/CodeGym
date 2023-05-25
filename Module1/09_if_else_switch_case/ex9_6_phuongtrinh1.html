@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 1</title>
+</head>
+<body>
+
+<script>
+        alert("Phương trình bậc 1 có dạng: ax + b = c (trong đó x là biến). Bấm OK để bắt đầu nhập a,b,c");
+        let a=parseInt(prompt("Nhập số a"));
+        let b=parseInt(prompt("Nhập số b"));
+        let c=parseInt(prompt("Nhập số c"));
+
+        if (a == 0 && b == c) {
+            alert("Phương trình không phải phương trình bậc 1 và có vô số nghiệm!");
+        } else if (a == 0 && b != c) {
+            alert("Phương trình vô nghiệm!");
+        } else {
+            let x1 = (c-b)/a;
+            alert("Phương trình có nghiệm là: " + x1);
+        }
+</script>
+
+</body>
+</html>

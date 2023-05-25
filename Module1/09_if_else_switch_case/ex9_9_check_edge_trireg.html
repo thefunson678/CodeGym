@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra cạnh của tam giác</title>
+</head>
+<body>
+<script>
+    let a = Number(prompt("Nhập cạnh a"));
+    let b = Number(prompt("Nhập cạnh b"));
+    let c = Number(prompt("Nhập cạnh c"));
+    let checkval = (a > 0 && b > 0 && c > 0 && a+b >c && a+c>b && b+c>a);
+    if (checkval) {
+        alert("Ba số nhập vào là cạnh của 1 tam giác!");
+    } else {
+        alert("Ba số nhập vào KHÔNG PHẢI là cạnh của tam giác!");
+    }
+</script>
+</body>
+</html>

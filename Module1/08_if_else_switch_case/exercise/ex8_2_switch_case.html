@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu lệnh Switch Case</title>
+</head>
+<style>
+    body{
+        font-size: 20px;
+    }
+</style>
+<body>
+<input type="text" onkeyup="delp1()" id="month">
+<input type="button" onclick="monthount()" value="Tính số ngày">
+<p id="p1"></p>
+<script>
+    function monthount() {
+        let months= parseFloat(document.getElementById("month").value);
+        switch (months) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                let a = "Tháng " + document.getElementById("month").value + " có 31 ngày!";
+                document.getElementById("p1").innerHTML="<strong>" + a + "</strong>";
+                break;
+            case 2:
+                let c = "Tháng " + document.getElementById("month").value + " có 28 hoặc 29 ngày!";
+                document.getElementById("p1").innerHTML="<strong>" + c + "</strong>";
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                let b = "Tháng " + document.getElementById("month").value + " có 30 ngày!";
+                document.getElementById("p1").innerHTML="<strong>" + b + "</strong>";
+                break;
+            default:
+                document.getElementById("p1").innerHTML="<strong>Không xác định được!</strong>";
+        };
+    };
+    function delp1() {
+        document.getElementById("p1").innerHTML="";
+    }
+</script>
+</body>
+</html>

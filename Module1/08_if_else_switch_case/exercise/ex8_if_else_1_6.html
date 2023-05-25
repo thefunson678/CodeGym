@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính hoa hồng</title>
+</head>
+<style>
+    table{
+        border: black;
+        border: 0.3px;
+        border: solid;
+    }
+    td{
+        text-align: center;
+        width: 200px;
+    }
+</style>
+<body>
+<table>
+    <tr>
+        <th>Doanh thu</th>
+        <th>Tỉ lệ hoa hồng</th>
+    </tr>
+    <tr>
+        <td>0 - dưới 10tr vnđ</td>
+        <td>5%</td>
+    </tr>
+    <tr>
+        <td>10tr - dưới 30tr vnđ</td>
+        <td>10%</td>
+    </tr>
+    <tr>
+        <td>30tr - dưới 100tr vnđ</td>
+        <td>15%</td>
+    </tr>
+    <tr>
+        <td>Từ 100tr vnđ trở lên</td>
+        <td>20%</td>
+    </tr>
+</table>
+<br>
+<button type="button" onclick="commission()">Bắt đầu tính</button>
+<script>
+    function commission() {
+        let thunhap = prompt("Nhập doanh thu bán hàng (đơn vị là triệu vnđ");
+        if (Number(thunhap) < 10) {
+            let profit = Number(thunhap) * 5 / 100;
+            alert(profit + "tr vnđ");
+
+        } else if (Number(thunhap) >= 10 && Number(thunhap) < 30){
+            let profit = Number(thunhap) * 10 / 100;
+            alert(profit + "tr vnđ");
+
+        } else if (Number(thunhap) >= 30 && Number(thunhap) < 100) {
+            let profit = Number(thunhap) * 15 / 100;
+            alert(profit + "tr vnđ");
+
+        } else if (Number(thunhap) >= 100) {
+            let profit = Number(thunhap) * 20 / 100;
+            alert(profit + "tr vnđ");
+        }
+    }
+</script>
+</body>
+</html>

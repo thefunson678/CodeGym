@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 01 - Bài 2</title>
+</head>
+<style>
+    body{
+        font-size: 20px;
+        font-weight: bold;
+    }
+</style>
+<body>
+<script>
+    let num1 = prompt("Nhập số nguyên thứ 1!");
+    let num2 = prompt("Nhập số nguyên thứ 2!");
+    let num3 = prompt("Nhập số nguyên thứ 3!");
+   if (num1 % 1 == 0 && num2 % 1 == 0 && num3 % 1 == 0) {
+       if (num1 > num2) {
+           if (num1 > num3) {
+               document.writeln("Số lớn nhất là:  " + num1 );
+           }else {
+               document.writeln("Số lớn nhất là:  " + num3 );
+           }
+       } else {
+           if (num2 > num3) {
+               document.writeln("Số lớn nhất là:  " + num2 );
+           }else {
+               document.writeln("Số lớn nhất là:  " + num3 );
+           }
+       }
+   } else {
+       document.writeln("Số bạn nhập là: " + num1 + "," + num2  + "," + num3 + " ==> Có số phải là số nguyên!");
+   }
+</script>
+</body>
+</html>

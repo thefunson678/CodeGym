@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính toán chỉ số BMI</title>
+</head>
+<style>
+    input{
+        text-align: center;
+    }
+</style>
+<body>
+<label>Chiều cao (m)</label>
+<input type="number" id="bmim">
+<label>Cân nặng (Kg)</label>
+<input type="number" id="bmikg">
+<button type="button" onclick="bmifunc()">Xem chỉ số BMI</button>
+<script>
+    function bmifunc() {
+        let h=document.getElementById("bmim").value;
+        let w=document.getElementById("bmikg").value;
+        let bmi= w/(h*h);
+        let fixbmi=bmi.toFixed(2)
+        if (bmi<18.5) {
+            alert("Your BMI is: " + fixbmi + " That main you are: Underweight" );
+        } else if (fixbmi >= 18.5 && fixbmi < 25 ) {
+            alert("Your BMI is: " + fixbmi + " That main you are: Normal" );
+        } else  if (fixbmi >=25 && fixbmi <30 ){
+            alert("Your BMI is: " + fixbmi + " That main you are: Overweight" );
+        }else if(fixbmi>=30){
+            alert("Your BMI is: " + fixbmi + " That main you are: Obese" );
+        } else {
+            alert("Lỗi nhập sai dữ liệu!");
+        };
+    };
+</script>
+</body>
+</html>
