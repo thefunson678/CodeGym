@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên tố đầu</title>
+</head>
+<body>
+<script>
+    let num = +prompt("Nhập 1 số nguyên dương bất kỳ, tôi sẽ in ra nhiều nhất 20 số nguyên tố đầu tiên?");
+    let count=0;
+    let write1=0;
+    for (let print1=1; print1 <= num; print1++) {
+        if (isPrime(print1)==1) {
+            document.writeln(print1);
+            document.writeln("</br>");
+            ++write1;
+            if (write1 ==20 ){ break };
+        }
+    }
+    function isPrime(val) {
+        let dem=0;
+        for (let i=1; i <= val/2; i++){
+           if (val % i ==0) {
+               ++dem;
+           }
+        }
+       return dem;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điều chỉnh nhiệt độ</title>
+</head>
+<body>
+<script>
+    let input1 =+prompt("Nhập nhiệt độ ngay bây giờ, tôi sẽ kiểm tra cho bạn!");
+    do {
+        if (input1 < 20) {
+            input1 =+prompt("Chưa đạt yêu cầu! Vui lòng TĂNG nhiệt độ!");
+        } else if(input1 >100) {
+            input1 =+prompt("Chưa đạt yêu cầu! Vui lòng GIẢM nhiệt độ!");
+        }
+        if (input1 == 0){
+            let con=confirm("Có thể bạn đã không nhập gì? Nếu là nhầm lẫn, hãy chọn OK để tiếp tục, chọn Hủy để thoát!");
+            if (con == false) {break};
+        }
+    } while (input1 < 20 || input1 > 100);
+</script>
+</body>
+</html>

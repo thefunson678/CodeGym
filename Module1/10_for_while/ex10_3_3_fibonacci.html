@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First 20 Fibonacci</title>
+</head>
+<body>
+<label>Đây là 20 số Fibonacci đầu tiên:</label>
+<script>
+    let fibo=0;
+    let count=1;
+    let sum2bf=0;
+    let num1=0;
+    let num2=1;
+    do {
+        ++fibo;
+        sum2bf=num1 + num2;
+        if (fibo == sum2bf || fibo ==1) {
+            document.writeln(fibo + ", ");
+            ++count;
+            num1=num2;
+            num2=fibo;
+        }
+    } while(count <= 20);
+</script>
+</body>
+</html>

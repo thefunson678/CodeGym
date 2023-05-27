@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi kép</title>
+</head>
+<style>
+    input{
+        text-align: center;
+        font-size: 20px;
+    }
+</style>
+<body>
+<label>Số tiền ban đầu (vnđ):</label>
+<input type="text" id="deposit">
+<br>
+<br>
+<label>Số tháng gửi tiết kiệm (tháng):</label>
+<input type="text" id="nummonth">
+<br>
+<br>
+<label>Lãi xuất 1 tháng (%):</label>
+<input type="text" id="profitbasic">
+<br>
+<br>
+<button type="button" onclick="calmoney()">Tính lãi kép ngay</button>
+<script>
+    function calmoney() {
+        let adepo = Number(document.getElementById("deposit").value);
+        let totalmonth = Number(document.getElementById("nummonth").value);
+        let rate = Number(document.getElementById("profitbasic").value);
+        if (adepo > 0 && totalmonth > 0 && rate >= 0) {
+            let totalearn = adepo * Math.pow(1 + rate / 100, totalmonth);
+            alert("Số tiền bạn tiết kiệm được là: " + totalearn + " vnđ");
+        } else {
+            alert("Vui lòng nhập các thông số đúng!");
+        }
+    }
+</script>
+</body>
+</html>
