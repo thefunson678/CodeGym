@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tam giác vuông</title>
+</head>
+<body>
+<style>
+    body{
+        font-size: 25px;
+        font-weight: bold;
+    }
+</style>
+<script>
+    for (let i=1;i<=5; i++){
+        document.writeln("</br>");
+        for (let j=1; j<=i;j++){
+            document.writeln("*")
+        }
+    }
+
+    document.writeln("</br>");
+    for (let n=1;n<=5; n++){
+        document.writeln("</br>");
+        for (let k=5; k>=n;k--){
+            document.writeln("*");
+        }
+    }
+
+    document.writeln("</br>");
+    for (h=1;h<=5;h++){
+        document.writeln("</br>");
+        for (let j=1;j<=5;j++){
+            if (j<=5-h){
+                document.writeln("&nbsp&nbsp");
+            } else {
+                document.writeln("*");
+            }
+        }
+
+    }
+    document.writeln("</br>");
+    for (h=1;h<=5;h++){
+        document.writeln("</br>");
+        for (let j=1;j<=5;j++){
+            if (j<h){
+                document.writeln("&nbsp&nbsp");
+            } else {
+                document.writeln("*");
+            }
+        }
+
+    }
+</script>
+</body>
+</html>

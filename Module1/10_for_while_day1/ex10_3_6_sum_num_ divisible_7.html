@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng 30 số chia hết cho 7 đầu tiên</title>
+</head>
+<body>
+<script>
+    let sumd7=0;
+    let count=0;
+    let i=0;
+    while (count <=30){
+        ++i;
+        if (i % 7 == 0){
+            count +=1;
+            sumd7+=i;
+            console.log(i)
+        }
+    }
+    alert("Tổng 30 số chia hết cho 7 đầu tiên là: " + sumd7);
+</script>
+</body>
+</html>

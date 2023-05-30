@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<style>
+    button{
+        height: 50px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+</style>
+<body>
+<center>
+    <p id="p1" style="font-size: 50px; font-weight: bold; color: red">Nhấp nút Bắt đầu chơi để bắt đầu</p>
+    <br>
+    <button type="button" id="start" onclick="start1()"><label id="ten">Bắt đầu chơi</label></button>
+    <script>
+        function start1() {
+            let num;
+            let num2;
+            let numpc;
+            let numuser;
+            let min;
+            let max;
+            let count=0;
+            document.getElementById("ten").innerText="Bắt đầu chơi"
+            do{
+                num= +prompt("Nhập giá trị dưới");
+                num2=+prompt("Nhập giá trị trên");
+                if (num == num2) {
+                    alert("Hai số bạn nhập giống nhau, không tạo ra một khoảng giá trị!")
+                }
+            }while (num==num2);
+
+            if (num < num2) {
+                numpc = Math.floor(Math.random()*(num2 - num)) + num;
+                min = num;
+                max = num2;
+            } else if (num > num2){
+                numpc = Math.floor(Math.random()*(num - num2)) + num2;
+                min = num2;
+                max = num;
+            }
+            alert(numpc);
+            do{
+                count++;
+                if (count==1) {
+                    alert("Bạn còn " + (4-count) + " lần dự đoán");
+                }
+                numuser = prompt("Nhập số mà bạn dự đoán");
+                if  (numuser == numpc) {
+                    alert("Chúc mừng bạn, bạn đã đoán đúng!");
+                    break;
+                } else if (numuser < numpc){
+                    alert("Số bạn đoán nhỏ hơn số của trò chơi và còn " + (3-count) + " lần dự đoán");
+                    if (count == 3){
+                        alert("Bạn đã thất bại!");
+                    }
+                }else if (numuser > numpc){
+                    alert("Số bạn đoán lớn hơn số của trò chơi và còn" + (3-count) + " lần dự đoán");
+                    if (count == 3){
+                        alert("Bạn đã thất bại!");
+                    }
+                }
+            } while (count <= 3);
+            document.getElementById("ten").innerText="Chơi lại";
+            if  (numuser == numpc) {
+                document.getElementById("p1").innerText="You win: " + numpc;
+            } else{
+                document.getElementById("p1").innerText="Đáp án là: " + numpc;
+            }
+        }
+    </script>
+</center>
+</body>
+</html>

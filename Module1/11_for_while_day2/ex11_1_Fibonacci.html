@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In dãy Fibonacci</title>
+</head>
+<body>
+<script>
+    let a=0;
+    while (a <=0){
+        a = +prompt("Bạn muốn in bao nhiêu số Fibonacci (nhập số >0):");
+    }
+    let i=1;
+    let numfibo1=0;
+    let numfibo2=0;
+    let count=1;
+    while (count++ <= a){
+        if (count ==1) {
+            document.writeln(1);
+            document.writeln("</br>");
+            numfibo1=1;
+            count += 1;
+        } else if (count == 2) {
+            document.writeln(1);
+            document.writeln("</br>");
+            numfibo2=1;
+        } else {
+            let tam =  fibonacci(numfibo1,numfibo2);
+            document.writeln(fibonacci(numfibo1,numfibo2));
+            document.writeln("</br>");
+            numfibo1 = numfibo2;
+            numfibo2 = tam;
+        }
+    }
+    function fibonacci(val,val2) {
+        return val+val2;
+    }
+</script>
+
+</body>
+</html>

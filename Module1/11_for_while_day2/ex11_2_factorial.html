@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giai thừa</title>
+</head>
+<body>
+<script>
+    let sum1=1;
+    let input;
+    do {
+        input = prompt("Nhập một số tự nhiên lớn hơn 0:");
+        if (input >0 && input % 1 == 0) {
+          for (let i = 1; i<= input; i++){
+              sum1=sum1*i;
+          }
+          alert("Giai thừa của " + input + ", " + input +"! = " + sum1);
+          break;
+        }
+    } while (input < 0 && input % 1 != 0);
+</script>
+</body>
+</html>
