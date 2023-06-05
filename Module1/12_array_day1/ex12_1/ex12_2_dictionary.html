@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển Anh-Việt</title>
+</head>
+<style>
+    body {
+        padding-top: 50px;
+        font-size: 20px;
+    }
+</style>
+<body>
+<label>Nhập từ tiếng Anh vào đây</label>
+<input type="text" id="en" style="height: 20px; font-size: 15px; text-align: center">
+<input type="button" onclick="see()" value="Tra cứu ngay" style="height: 20px; font-size: 15px">
+<br>
+<p id="p1"></p>
+<script>
+    let booken =["one","two"];
+    let bookvn =["một","hai"];
+    function see() {
+        let val=document.getElementById("en").value;
+        for (let i =0; i<booken.length;i++){
+            if (val.toUpperCase() === booken[i].toUpperCase()){
+                alert(bookvn[i]);
+                break;
+            }
+            if (val.toUpperCase() !== booken[i].toUpperCase() & i==booken.length-1){
+                alert("Không tìm thấy!");
+                break;
+            }
+        }
+    }
+</script>
+</body>
+</html>

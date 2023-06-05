@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập số và chèn gạch ngang</title>
+</head>
+<body>
+<script>
+    let    a =prompt("Nhập một dãy số!")
+    let  b=[]
+    for (let i=0;i<a.length;i++){
+        if (a[i] % 2 == 0 & a[i+1] % 2 == 0 & i < a.length){
+            b.push(a[i]);
+            b.push("-");
+        } else {
+            b.push(a[i]);
+        }
+    }
+    alert(b.join(""))
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nối phần tử</title>
+</head>
+<body>
+<script>
+    let myColor = ["Red", "Green", "White", "Black"];
+    document.writeln(myColor.join(","));
+    document.writeln("<br>");
+    document.writeln(myColor.toString());
+    document.writeln("<br>");
+    document.writeln(myColor.toLocaleString());
+    document.writeln("<br>");
+    for (let i=0; i<myColor.length;i++){
+        if (i==0){
+            document.write(myColor[i]);
+        }else{
+            document.write("," + myColor[i]);
+        }
+    }
+</script>
+</body>
+</html>
