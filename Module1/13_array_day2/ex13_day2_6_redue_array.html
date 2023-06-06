@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thay thế ký tự trong mảng</title>
+</head>
+<body>
+<script>
+    let arr1=[];
+    for (let i = 0;i<5;i++){
+        arr1[i]=prompt("Nhập phần tử thứ " + (i + 1));
+    }
+
+    for (let i = 0; i < arr1.length; i++) {
+        if(arr1[i].includes("-")){
+            arr1[i] = arr1[i].replaceAll("-", "_");
+        }
+    }
+
+    console.log(arr1)
+
+    // for (let i = 0; i< arr1.length; i++){
+    //     for (let j=0; j< arr1[i].length; j++){
+    //         if (arr1[i][j] == "-"){
+    //             arr1[i][j]="_";
+    //         }
+    //     }
+    // }
+    // document.writeln(arr1);
+</script>
+</body>
+</html>

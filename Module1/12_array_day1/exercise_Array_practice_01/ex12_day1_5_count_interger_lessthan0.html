@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng day 1 - Bài 5</title>
+</head>
+<body>
+<script>
+    let a=[];
+    let count = 0;
+    let n = +prompt("Bạn muốn nhập bao nhiêu phần tử?")
+    if (n>0){
+        for (let i=0; i < n; i++ ){
+            a[i]= prompt("Nhập phần tử thứ " + i + ":");
+        }
+    }
+    for (let ele of a){
+        if (ele % 1 ==0 && ele <0){
+            count++;
+        }
+    }
+    alert("Tổng số nguyên âm là: " + count );
+</script>
+</body>
+</html>

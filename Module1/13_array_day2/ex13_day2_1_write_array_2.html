@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In ra mảng 2 chiều</title>
+</head>
+<body>
+<script>
+    let a=[];
+    alert("Nhập mảng 2 chiều gồm 4 x 4 phần tử");
+    for (let i = 0;i<4;i++){
+        a[i] = new Array();
+        for (let j=0; j<4;j++){
+            a[i][j]=prompt("Nhập giá trị dòng " + i + " dòng " + j);
+        }
+    }
+    for (let i = 0;i<4;i++){
+        document.writeln("row " + i + "<br>");
+        for (let j=0; j<4;j++){
+            document.writeln(a[i][j] + "<br>");
+        }
+    }
+</script>
+</body>
+</html>

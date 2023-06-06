@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng day 1 - bài 3</title>
+</head>
+<body>
+<script>
+    let inarr = [];
+    let maxin=0;
+    let nexttrue = true;
+    do {
+        if (inarr.length != 0){
+            inarr[inarr.length]= +prompt("Nhập phần tử (số nguyên) thứ " + inarr.length + ":");
+        } else {
+            inarr.push(+prompt("Nhập phần tử (số nguyên) thứ " + inarr.length + ":"));
+        }
+        if (inarr[inarr.length-1] % 1 != 0) {
+            alert("Số nhập vào không phải số nguyên! Nhập lại!")
+            continue;
+        }
+        nexttrue = confirm("Bạn nhập xong chưa? Chọn Yes/OK để báo nhập xong và thoát");
+    } while (!nexttrue);
+    let sumb=0;
+    let aveg;
+    for (let i=0; i< inarr.length;i++){
+        sumb += inarr[i];
+        aveg=sumb/(i+1);
+        if (inarr[i] > maxin){
+            maxin = inarr[i];
+        }
+    }
+    alert("Số lớn nhất là: " + maxin + ". Và giá trị trung bình là: " + aveg);
+</script>
+</body>
+</html>

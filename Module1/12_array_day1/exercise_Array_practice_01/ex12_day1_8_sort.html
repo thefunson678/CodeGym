@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng day 1 - bài 8</title>
+</head>
+<body>
+<script>
+    let arr1=[];
+    for (let i = 0;i<10;i++){
+        arr1[i]=+prompt("Nhập phần tử thứ " + (i + 1));
+    }
+    document.writeln(arr1);
+    document.writeln("<br>");
+    arr1.sort(function (a,b){
+        b-a;
+        return b-a;
+    })
+    document.writeln(arr1);
+    document.writeln("<br>");
+</script>
+</body>
+</html>

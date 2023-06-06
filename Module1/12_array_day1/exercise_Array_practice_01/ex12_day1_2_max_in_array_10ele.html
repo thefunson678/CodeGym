@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng day 1 - bài 2</title>
+</head>
+<body>
+<script>
+let inarr = Array(10);
+let i=0;
+let maxin=0;
+do {
+    inarr[i] = +prompt("Nhập phần tử (số nguyên) thứ " + i + ":");
+    if (inarr[i] % 1 == 0) {
+        if (i == 0) {
+            maxin = inarr[i];
+        } else if (maxin<inarr[i]) {
+            maxin = inarr[i];
+        }
+        i++;
+    } else {
+        alert("Số nhập vào không phải số nguyên! Nhập lại!")
+    }
+} while (i<=9);
+alert("Số lớn nhất là: " + maxin);
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng day 1 _ Bài 9</title>
+</head>
+<body>
+<script>
+    alert("Bắt đầu nhập bảng a");
+    let a=[];
+    for (let i = 0;i<10;i++){
+        a[i]=+prompt("Nhập phần tử thứ " + (i + 1));
+    }
+    alert("Bắt đầu nhập bảng b");
+    let b=[];
+    for (let i = 0;i<10;i++){
+        b[i]=+prompt("Nhập phần tử thứ " + (i + 1));
+    }
+    let c=[];
+    c=a.concat(b);
+    document.writeln(c)
+</script>
+</body>
+</html>
