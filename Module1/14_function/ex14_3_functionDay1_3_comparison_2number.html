@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>So sánh 2 số</title>
+</head>
+<body>
+<h1>Hàm so sánh 2 số nhập vào</h1>
+<button type="button" onclick="comparison1()">Gọi hàm</button>
+
+<script>
+    function comparison1(val1,val2) {
+        val1=+prompt("Nhập vào số thứ nhất");
+        val2= +prompt("Nhập vào số thứ hai");
+        if (val1 > val2){
+            document.writeln("<br>");
+            document.writeln("<p>Số thứ nhất lớn hơn số thứ hai</p>");
+            document.writeln("<h1>" + "Hàm so sánh 2 số nhập vào" + "</h1>");
+            document.writeln("<button type='button/' onclick='comparison1()'>" + "Gọi hàm" + "</button>");
+        }else {
+            document.writeln("<br>");
+            document.writeln("<p> Tổng của 2 số là: " + (val1 + val2) + "</p>");
+            document.writeln("<h1>" + "Hàm so sánh 2 số nhập vào" + "</h1>");
+            document.writeln("<button type='button/' onclick='comparison1()'>" + "Gọi hàm" + "</button>");
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số ký tự</title>
+</head>
+<body>
+<h2>Kiểm tra một ký tự trong mảng</h2>
+<button onclick="checkwords()">Bắt đầu</button>
+<script>
+    function checkwords() {
+        let arrchar=[];
+        let arrnum = + prompt("Bạn muốn nhập mảng bao nhiêu phần tử");
+        if (arrnum > 0){
+            for (let i=0; i< arrnum;i++){
+                arrchar[i] = prompt("Nhập phần tử thứ " + (i+1));
+            }
+            let yourword = prompt("Nhập phần tử bất kỳ")
+            if (!RegExp(yourword).test(arrchar.toString())){
+                alert(-1);
+            } else {
+               let totalnum=0;
+               for (let i=0; i< arrchar.length;i++){
+                   if (arrchar[i]=== yourword){
+                       totalnum +=1;
+                   }
+               }
+               alert("Số lần xuất hiện ký tự trong mảng là: " + totalnum);
+            }
+
+        } else  {
+            return alert("Không xác định được số phần tử của mảng!");
+        }
+    }
+</script>
+</body>
+</html>

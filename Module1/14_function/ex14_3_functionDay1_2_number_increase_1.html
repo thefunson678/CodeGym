@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tăng đối số lên 1</title>
+</head>
+<body>
+<h1>Hàm tăng lên 1 đơn vị</h1>
+<button type="button" onclick="inc1()">Gọi hàm</button>
+<script>
+    function inc1(val) {
+        val = +prompt("Nhập vào một số bất kỳ:");
+        val+=1;
+        document.writeln("<h1>" + "Hàm tăng lên 1 đơn vị" + "</h1>");
+        document.writeln("<button type='button/' onclick='inc1()'>" + "Gọi hàm" + "</button>");
+        document.writeln("<br>");
+        document.writeln("<p>" + "Giá trị tăng lên 1 đơn vị là: " + val + "</p>");
+
+    }
+</script>
+</body>
+</html>

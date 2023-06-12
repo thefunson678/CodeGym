@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược mảng</title>
+</head>
+<body>
+<h2>Kiểm tra số nguyên dương</h2>
+<button onclick="revarr()">Bắt đầu</button>
+<script>
+    function revarr() {
+        let arr1=[];
+        let arrlenght = prompt("Bạn muốn mảng gồm bao nhiêu phần tử?");
+        if (arrlenght > 0){
+            for (let i=0; i< arrlenght;i++){
+                arr1[i] = prompt("Nhập phần tử thứ " + (i+1));
+            }
+            arr1.reverse();
+            alert("Mảng sau khi đảo ngược là: " + arr1.toString() );
+        } else  {
+            return alert("Không xác định được số phần tử của mảng!");
+        }
+    }
+</script>
+</body>
+</html>

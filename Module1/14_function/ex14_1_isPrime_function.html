@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Prime number</title>
+</head>
+<body>
+<h3>Kiểm tra một số nguyên tốt nhỏ hơn 10000</h3>
+<label>Nhập vào 1 số</label>
+<input type="text" id="num1" style="width: 50px; text-align: center">
+<button type="button" onclick="isPrime()">Check is Price</button>
+<br>
+<h3>Các số nguyên tố nhỏ hơn 10000 là: </h3>
+<script>
+    for (let i=1;i<10000;i++) {
+        if (isPrime1(i) == "Đây là một số nguyên tố!") {
+            document.writeln("<br>" + i)
+        }
+    }
+    function isPrime() {
+        alert(isPrime1(document.getElementById("num1").value))
+    }
+    function isPrime1(val) {
+        if (val >= 1000){
+            return "Số lớn hơn 10000 nên không được kiểm tra!";
+        } else if (val === 1){
+            return "Đây không phải số nguyên tố!";
+        } else if (val === 2 || val === 3){
+            return  "Đây là một số nguyên tố!";
+        } else {
+            for (let i = 2; i<=Math.ceil(val/2) + 1; i++){
+                if (val % i == 0) {
+                    return "Đây không phải là một số nguyên tố!";
+                } else if (val % i != 0 & i==Math.ceil(val/2)){
+                    return "Đây là một số nguyên tố!";
+                }
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

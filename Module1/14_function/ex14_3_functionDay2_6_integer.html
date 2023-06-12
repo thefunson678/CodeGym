@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra số nguyên dương</title>
+</head>
+<body>
+<h2>Kiểm tra số nguyên dương</h2>
+<button onclick="checkinteger()">Bắt đầu</button>
+<script>
+    function checkinteger() {
+        let num = +prompt("Nhập một số bất kỳ!")
+        if (num > 0 && num % 1 ===0 ){
+            return alert(true);
+        } else {
+            return  alert(false);
+        }
+    }
+</script>
+</body>
+</html>

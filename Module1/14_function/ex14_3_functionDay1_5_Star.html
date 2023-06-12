@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm ngôi sao</title>
+</head>
+<body>
+<h3>Tìm ngôi sao - Chòm sao</h3>
+<button type="button" onclick="addnum()">Bắt đầu gọi hàm</button>
+<script>
+    let arrstar=["Polaris", "Aldebaran", "Deneb", "Vega", "Altair","Dubhe","Regulus"]
+    let arrstargroup = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+
+    function addnum(val1) {
+        val1=prompt("Nhập chuỗi bất kỳ để tham chiếu!");
+        alert( findstar(val1));
+    }
+    function findstar(val) {
+        for (let i=0; i< arrstar.length; i++){
+            if (val === arrstar[i]){
+                return arrstargroup[i];
+            } else if (i==6 & val !==arrstar[i]){
+                return "Not found Constellation!";
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giai thừa</title>
+</head>
+<body>
+<h2>Bình phương</h2>
+<button onclick="fac1()">TÍnh giai thừa</button>
+<script>
+    function fac1() {
+        let val=+prompt("Nhập vào một số nguyên bấn kỳ lớn hơn 0");
+        if (val > 0 && val % 1 ==0 ){
+            let sum=1;
+            for (let i=1; i<= val;i++){
+                sum = sum*i;
+            }
+            return alert("Giai thừa của " + val + " là: " + sum);
+        } else {
+            return alert("Số nhập vào không hợp lệ hoặc bằng không!");
+        }
+    }
+</script>
+</body>
+</html>

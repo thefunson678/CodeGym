@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi chỗ 2 số </title>
+</head>
+<body>
+<h2>Kiểm tra số nguyên dương</h2>
+<button onclick="doicho()">Bắt đầu</button>
+<script>
+    function doicho() {
+        const a = [];
+        for (let i = 0; i < 2; i++) {
+            a[i] = prompt("Nhập số thứ " + (i + 1));
+        }
+
+        alert("Trước đổi chỗ: " + a.toString() + "\nSau đổi chỗ: " + doicho2so(a));
+    }
+    function doicho2so(ar) {
+       [ar[0],ar[1]] = [ar[1], ar[0]];
+        // let tam = ar[0];
+        // ar[0]=ar[1];
+        // ar[1]=tam;
+        console.log(ar)
+        return ar;
+    }
+</script>
+</body>
+</html>

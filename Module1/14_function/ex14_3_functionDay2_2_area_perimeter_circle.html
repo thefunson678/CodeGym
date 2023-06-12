@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích chu vi hình tròn</title>
+</head>
+<body>
+<h2>Diện tích chu vi hình tròn</h2>
+<button onclick="tofunction()">Gọi hàm tính bình phương</button>
+<script>
+    const pi = 3.1415
+    function tofunction() {
+        let r = + prompt("Nhập bán kính của đường tròn");
+        let area1= areafunc(r);
+        let perimeter1 = perimeterfunc(r);
+        return alert("Diện tích hình tròn là: " + area1.toFixed(4) + " \nChu vi hình tròn là: " + perimeter1.toFixed(4));
+    }
+    function areafunc(val) {
+        return val*val*pi;
+    }
+    function perimeterfunc(val) {
+        return 2*val*pi;
+    }
+</script>
+</body>
+</html>
