@@ -33,6 +33,7 @@
             alert("Không có tên sản phẩm để thêm!")
         } else {
             arrpr.push(sp);
+            document.getElementById("sp").value="";
             showpr();
         }
     }
@@ -40,11 +41,11 @@
         document.getElementById("tablepr").innerHTML="";
         let showtable ="";
         showtable="<table>"
-        showtable += "<tr><th>STT</th><th>Tên sản phẩm</th><th>Sửa</th><th>Xóa</th></tr>";
+        showtable += "<tr><th style='width: 30px'>STT</th><th>Tên sản phẩm</th><th>Sửa</th><th>Xóa</th></tr>";
         for (let i=0; i< arrpr.length;i++){
             showtable += "<tr>";
-            showtable += "<td>" + (i+1) + "</td>";
-            showtable += "<td>" + arrpr[i] + "</td>";
+            showtable += "<td style='width: 30px'>" + (i+1) + "</td>";
+            showtable += "<td style='text-align: left'>" + arrpr[i] + "</td>";
             showtable += "<td>" + "<button onclick='changepr(" + i + ")'>Sửa</button>" + "</td>";
             showtable += "<td>" + "<button onclick='deletepr(" + i + ")'>Xóa</button>"  + "</td>";
             showtable += "</tr>";
