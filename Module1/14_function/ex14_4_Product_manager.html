@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý sản phẩm</title>
+</head>
+<style>
+    table, tr, th, td{
+        border: solid 1px black;
+        border-collapse: collapse;
+        text-align: center;
+    }
+    td, th{
+        width: 200px;
+    }
+</style>
+<body>
+<div style="text-align: center"><h1>QUẢN LÝ SẢN PHẨM</h1></div>
+<br>
+<h2 id="add">Thêm sản phẩm</h2>
+<br>
+<input type="text" id="sp" style="text-align: left; font-size: 15px; width: 150px; height: 30px">
+<button type="button" onclick="addpr()" style="height: 35px; background-color: cadetblue">Thêm sản phẩm</button>
+
+<br>
+<h2 id="total">Danh sách sản phẩm</h2>
+<div id="tablepr"></div>
+<script>
+    let arrpr=[];
+    function addpr() {
+        let sp=document.getElementById("sp").value;
+        if (sp == ""){
+            alert("Không có tên sản phẩm để thêm!")
+        } else {
+            arrpr.push(sp);
+            showpr();
+        }
+    }
+    function showpr() {
+        document.getElementById("tablepr").innerHTML="";
+        let showtable ="";
+        showtable="<table>"
+        showtable += "<tr><th>STT</th><th>Tên sản phẩm</th><th>Sửa</th><th>Xóa</th></tr>";
+        for (let i=0; i< arrpr.length;i++){
+            showtable += "<tr>";
+            showtable += "<td>" + (i+1) + "</td>";
+            showtable += "<td>" + arrpr[i] + "</td>";
+            showtable += "<td>" + "<button onclick='changepr(" + i + ")'>Sửa</button>" + "</td>";
+            showtable += "<td>" + "<button onclick='deletepr(" + i + ")'>Xóa</button>"  + "</td>";
+            showtable += "</tr>";
+        }
+        showtable=showtable + "</table>";
+        document.getElementById("tablepr").innerHTML= showtable;
+    }
+    function deletepr(val) {
+        if (val == arrpr.length-1){
+            arrpr.pop();
+            return showpr();
+        } else {
+            for (let j= val; j < arrpr.length;j++){
+                if (j==arrpr.length-1){
+                    arrpr.pop();
+                } else {
+                    arrpr[j]=arrpr[j+1];
+                }
+            }
+            return  showpr();
+        }
+    }
+    function changepr(val) {
+        arrpr[val]= prompt("Nhập tên sản phẩm mới");
+        return  showpr();
+    }
+</script>
+</body>
+</html>
