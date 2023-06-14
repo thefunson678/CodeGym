@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đối xứng</title>
+</head>
+<button type="button" onclick="isPalindrome()">Bắt đầu kiểm tra</button>
+<body>
+<script>
+    function isPalindrome() {
+        let char1=prompt("Nhập từ bất kỳ");
+        for (let  i = 0; i<char1.length;i++){
+            if (i > char1.length/2){
+                break;
+            }
+            if (!(char1[i] === char1[char1.length-1-i])){
+                return alert(false);
+            }
+        }
+        return alert(true);
+    }
+</script>
+
+</body>
+</html>
