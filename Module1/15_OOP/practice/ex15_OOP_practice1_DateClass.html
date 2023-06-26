@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date Class</title>
+</head>
+<body>
+<script>
+    class MyDate{
+        #day;
+
+        constructor(day, month,year) {
+            this.#day = day;
+            this.month = month;
+            this.year = year;
+        }
+
+        get Day(){
+            return this.#day;
+        }
+
+
+    }
+    let testdate= new MyDate(19,6,2023);
+
+    // let day=testdate.getDay();
+    // let month = testdate.getMonth();
+    // let year = testdate.getYear();
+    alert("Time is: " + testdate.Day + "," + testdate.month + "," + testdate.year);
+
+</script>
+</body>
+</html>

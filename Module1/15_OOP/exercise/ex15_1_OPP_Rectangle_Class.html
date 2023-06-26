@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rectangle Class</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1470" height="980" style="border: 2px solid gray"></canvas>
+<script>
+    class rectangleClass {
+        constructor(width, height) {
+            this.width = width;
+            this.height= height;
+        }
+        get getArea (){
+            return this.width * this.height;
+        }
+        get getPerimeter() {
+            return (this.width + this.height)*2
+        }
+        get getCanvas(){
+            let rect = document.getElementById("myCanvas");
+            let ve =rect.getContext("2d");
+            ve.moveTo(10,10);
+            ve.lineTo(this.width,10);
+            ve.lineTo(this.width,this.height);
+            ve.lineTo(10,this.height);
+            ve.lineTo(10,10);
+            ve.stroke();
+        }
+    }
+    let rectcanvas = new rectangleClass(200,100);
+    rectcanvas.getCanvas;
+    alert("Diện tích hình chữ nhật là: " + rectcanvas.getArea + ", Chu vi hình chữ nhật là: " + rectcanvas.getPerimeter)
+</script>
+</body>
+</html>

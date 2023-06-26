@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adam and Eva</title>
+</head>
+<body>
+<script>
+
+    class Apple{
+        #weight
+        constructor() {
+            this.typeName = "Apple";
+            this.#weight = 10;
+        }
+        getWeight(){
+            return this.#weight
+        }
+        decrease(){
+            this.#weight -=  1;
+        }
+        isEmpty(){
+            if (this.#weight ==0 ) {
+                return "Fail";
+            }
+        }
+    }
+    class Human {
+        #human_name;
+        #gender;
+        constructor(human_name, gender, weight) {
+            this.#gender = gender;
+            this.#human_name = human_name;
+            this.weight = weight;
+        }
+        getName(){
+            return this.#human_name;
+        }
+        getGender(){
+            return this.#gender;
+        }
+        setGender(gender){
+            this.#gender = gender;
+        }
+        getWeight(){
+            return this.weight;
+        }
+        setWeight(num){
+            this.weight = (this.weight + num);
+        }
+        checkApple(Apple){
+            return Apple.getWeight();
+        }
+        say(string){
+            console.log(this.#human_name + ":" + string);
+        }
+        eat(Apple){
+            let w=this.checkApple(Apple);
+            if (w==0){
+                alert("Đã không còn táo để ăn!")
+            } else {
+                Apple.decrease();
+                this.weight = this.weight +1;
+            }
+        }
+
+    }
+    let apple = new Apple();
+    let Adam = new Human("Adam","Male",50);
+    let Eva =new Human("Eva", "Female", 40);
+    console.log("Câu chuyện bắt đầu:");
+    Adam.say("Xin chào, Eva!");
+    Eva.say("Xin chào, Adam");
+    console.log("Hai người cùng đi dạo và quả táo xuất hiện");
+    Adam.say("Đây chắn chắn là " + apple.typeName);
+    Eva.say("Hãy xem nó to chưa này");
+    Adam.say("Nó nặng " + Adam.checkApple(apple) + "đv");
+    console.log("Thống kê cân nặng: Adam: " + Adam.getWeight() + ", Eva: " + Eva.getWeight() + ", Apple: " + apple.getWeight());
+    Adam.say("Để cắn một miếng nó xem nó có ngon không!");
+    Eva.say("OK");
+    Adam.eat(apple);
+    console.log("Thống kê cân nặng: Adam: " + Adam.getWeight() + ", Eva: " + Eva.getWeight() + ", Apple: " + apple.getWeight());
+    Adam.say("Nó ngon lắm, Eva! Hãy thử ăn một miếng đi!");
+    Eva.eat(apple);
+    console.log("Thống kê cân nặng: Adam: " + Adam.getWeight() + ", Eva: " + Eva.getWeight() + ", Apple: " + apple.getWeight());
+    console.log("Một lúc sau...");
+    Adam.say("Eva, you are " + Eva.getGender());
+    Eva.say("And you are " + Adam.getGender());
+    console.log("Hai người cảm thấy mắc cỡ và trốn đi!");
+    console.log("End!");
+</script>
+</body>
+</html>
