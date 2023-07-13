@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TEST 2</title>
+</head>
+<body>
+<button onclick="perfectnum()">Kiểm tra số hoàn hảo</button>
+<script>
+    function perfectnum() {
+        let num = prompt("Nhập vào một số");
+        if (num > 0 && (num % 1) == 0){
+            alert(isPerfectnum(num))
+        } else {
+            alert("Số vừa nhập không phải một số nguyên dương!")
+        }
+    }
+    function isPerfectnum(val) {
+        let sum=0;
+        for (let i = 1; i<= val/2; i++){
+            if (val % i == 0){
+                sum +=i;
+            }
+        }
+        if (sum == val){
+            return "True: Số " + val + " là một số hoàn hảo!"
+        } else {
+            return "False: Số " + val + " không phải là một số hoàn hảo!"
+        }
+    }
+</script>
+</body>
+</html>

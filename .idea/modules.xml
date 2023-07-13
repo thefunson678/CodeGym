@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/codegym.iml" filepath="$PROJECT_DIR$/.idea/codegym.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module2/module2.iml" filepath="$PROJECT_DIR$/module2/module2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module2/ss02_array_loop/ss02_array_loop.iml" filepath="$PROJECT_DIR$/module2/ss02_array_loop/ss02_array_loop.iml" />
     </modules>
   </component>
 </project>

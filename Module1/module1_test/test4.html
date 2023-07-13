@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TEST4</title>
+</head>
+<style>
+    table, td, th, td {
+        border: solid 1px blue;
+        border-collapse: collapse;
+    }
+</style>
+<body>
+<br>
+<button onclick="listtable()">Lấy bảng danh sách</button>
+<button onclick="add()">Thêm công nhân</button>
+<button onclick="edit()">Sửa thông tin</button>
+<button onclick="deleteid()">Xóa công nhân</button>
+<br>
+<h3>Bảng danh sách nhân viên</h3>
+<div id="listtb"></div>
+<script>
+    let arr=[];
+    arr2=[];
+
+    class worker{
+        constructor(stt, fullname, birthday, address, luong, chucvu) {
+            this.stt=stt;
+            this.fullname=fullname;
+            this.birthday=birthday;
+            this.address=address;
+            this.luong=luong;
+            this.chucvu=chucvu;
+        }
+    }
+    function listtable(){
+        let word =""
+        word += "<table><tr>";
+        word += "<th>" + arr[0].stt + "</th>";
+        word += "<th>" + arr[0].fullname + "</th>";
+        word += "<th>" + arr[0].birthday + "</th>";
+        word += "<th>" + arr[0].address + "</th>";
+        word += "<th>" + arr[0].luong + "</th>";
+        word += "<th>" + arr[0].chucvu + "</th>";
+        word += "</tr>";
+        if (arr2.length >0){
+            for (let i=0; i< arr2.length; i++){
+                word += "<tr>";
+                word += "<td>" + arr2[i].stt + "</td>";
+                word += "<td>" + arr2[i].fullname + "</td>";
+                word += "<td>" + arr2[i].birthday + "</td>";
+                word += "<td>" + arr2[i].address + "</td>";
+                word += "<td>" + arr2[i].luong + "</td>";
+                word += "<td>" + arr2[i].chucvu + "</td>";
+                word += "</tr>";
+            }
+        }
+        word += "</table>";
+    document.getElementById("listtb").innerHTML=word;
+    }
+
+
+    function add() {
+        let fulname=prompt("Nhập họ và tên");
+        let birthday=prompt("Nhập ngày sinh");
+        let address=prompt("Nhập địa chỉ");
+        let luong=prompt("Nhập lương");
+        let chucvu=prompt("Nhập chức vụ");
+        if (arr2.length > 0 ){
+            arr2[arr2.length] = new worker(arr2.length,fulname,birthday,address,luong,chucvu);
+            listtable();
+        } else {
+            arr2[0] = new worker(1,fulname,birthday,address,luong,chucvu);
+            listtable();
+        }
+    }
+
+
+    function deleteid() {
+        let n = +prompt("Nhập số thứ tự (STT) công nhân muốn xóa:");
+        if (n > 0 && n <= arr2.length) {
+            for (let i = n - 1; i< arr2.length - 1; i++) {
+                arr2[i] = arr2[i + 1];
+                arr2[i].stt = (i + 1);
+            }
+        }
+        arr2.pop();
+        listtable();
+    }
+
+
+    function edit() {
+        let n = +prompt("Nhập số thứ tự (STT) công nhân muốn sửa:");
+        if (n>0) {
+            let fulname=prompt("Nhập họ và tên",arr2[n-1].fullname);
+            let birthday=prompt("Nhập ngày sinh",arr2[n-1].birthday);
+            let address=prompt("Nhập địa chỉ",arr2[n-1].address);
+            let luong=prompt("Nhập lương",arr2[n-1].luong);
+            let chucvu=prompt("Nhập chức vụ",arr2[n-1].chucvu);
+            arr2[n-1].fullname=fulname;
+            arr2[n-1].birthday=birthday;
+            arr2[n-1].address=address;
+            arr2[n-1].luong=luong;
+            arr2[n-1].chucvu=chucvu;
+            listtable();
+            alert("Thông tin đã được cập nhật")
+        } else {
+            alert("Số thứ tự không đúng!")
+        }
+    }
+    arr[0]= new worker("STT","Họ và tên", "Ngày sinh",  "Địa chỉ", "Lương", "Chức vụ");
+</script>
+</body>
+</html>

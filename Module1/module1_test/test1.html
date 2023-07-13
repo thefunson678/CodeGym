@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TEST 1</title>
+</head>
+<body>
+<button onclick="create()">Tạo một mảng mới</button>
+<br>
+<br>
+<h3>Kết quả</h3>
+<div id="ketqua"></div>
+<script>
+    function create() {
+        let arr=[];
+        let ave3 = 0;
+        let sum3=0;
+        let count = 0;
+        let n= +prompt("Mảng bạn tạo có bao nhiêu phần tử");
+        if (n <=0 ){
+            return alert("Số phần tử phải lớn hơn 0.");
+        } else if (n > 50) {
+            alert("Số phần tử phải nhỏ hơn hoặc bằng 50.");
+        } else {
+            for (let i =0; i< n; i++){
+                arr[i] = +prompt("Nhập số thứ " + (i+1));
+                if (arr[i] % 3 == 0) {
+                    sum3 += arr[i];
+                    count++;
+                }
+            }
+            ave3 = sum3 / count;
+            document.getElementById("ketqua").innerHTML = "Mảng tạo ra là: " + arr.toString() + "<br>Giá trị trung bình của các số chia hết cho 3 là: " + ave3;
+        }
+
+    }
+</script>
+</body>
+</html>

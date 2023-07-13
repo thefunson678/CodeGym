@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TEST 3</title>
+</head>
+<body>
+<button onclick="dayofmonth()">Nhập tháng, năm tính ra số ngày</button>
+<br>
+<br>
+<h3>Kết quả</h3>
+<div id="kequa"></div>
+<script>
+    function dayofmonth() {
+        let date1 = prompt("Nhập tháng,năm (ví dụ: 05/2023)");
+        if (checkdate(date1)) {
+            let month = date1.substring(0,2)
+            if ( month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12){
+                alert("Ngày vào: " + date1 + " có 31 ngày");
+            } else if (month ==4 || month == 6 || month == 9 || month == 11) {
+                alert("Ngày vào: " + date1 + " có 30 ngày");
+            } else if (month ==2){
+              alert("Ngày vào: " + date1 + " có 28 hoặc 29 ngày");
+            } else {
+                alert("Số nhập vào không hợp lệ!");
+            }
+        } else {
+            alert("Định dạng tháng, năm không đúng!");
+        }
+    }
+    function checkdate(strdate) {
+        if (strdate.length !=7 || strdate.charAt(2) != "/"){
+            return false;
+        } else {
+            for (let i=0; i< strdate.length; i++){
+                let char = "0123456789".search(strdate.charAt(i));
+                console.log((char == -1));
+                if (i != 2) {
+                    console.log(i);
+                    if (char == -1) {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+    }
+</script>
+</body>
+</html>

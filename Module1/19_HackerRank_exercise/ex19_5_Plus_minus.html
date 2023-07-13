@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plus Minus</title>
+</head>
+<body>
+<script>
+    let arr=[];
+    let n = +prompt("Nhập số phần tử của mảng: ");
+    if (n==0 || (n % 1) != 0){
+        alert("Số nhập vào không hợp lệ!")
+    } else {
+        for (let i=0; i < n; i++){
+            do {
+                arr.push(+prompt("Nhập phần tử thứ " + (i + 1) + " là một số nguyên!"));
+            } while ((arr[i] % 1) != 0);
+        }
+        rate_positive(arr);
+        document.write("<br>");
+        rate_negative(arr);
+        document.write("<br>");
+        rate_zero(arr);
+    }
+    function rate_positive(arr) {
+        let sumpositive=0;
+        let ratepositive=0;
+        for (let j=0; j< arr.length; j++){
+            if ( arr[j] > 0) {
+                sumpositive++;
+            }
+        }
+        ratepositive = sumpositive/arr.length*100;
+        document.write("positive rate: " + ratepositive.toFixed(6) + "%");
+    }
+    function rate_negative(arr) {
+        let sumnegative=0;
+        let ratenegative=0;
+        for (let j=0; j< arr.length; j++){
+            if ( arr[j] < 0) {
+                sumnegative++;
+            }
+        }
+        ratenegative = sumnegative/arr.length*100;
+        document.write("negative rate: " + ratenegative.toFixed(6) + "%");
+    }
+    function rate_zero(arr) {
+        let sumzero=0;
+        let ratezero=0;
+        for (let j=0; j< arr.length; j++){
+            if ( arr[j] == 0) {
+                sumzero++;
+            }
+        }
+        ratezero = sumzero/arr.length*100;
+        document.write("zero rate: " + ratezero.toFixed(6) + "%");
+    }
+</script>
+</body>
+</html>

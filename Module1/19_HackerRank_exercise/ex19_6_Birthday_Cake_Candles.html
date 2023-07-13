@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Birthday Cake Candles</title>
+</head>
+<body>
+<script>
+    let candles= [];
+    let n = +prompt("Cậu/Cô bé bao nhiêu tuổi?");
+    for (let i= 0; i < n; i++){
+        do {
+            candles[i] = +prompt("Nhập số nguyên dương tuổi bất kỳ của cậu/cô bé");
+        } while ((candles[i] % 1) !=0 || candles[i] < 0 );
+
+    }
+    document.writeln("The maximum height candles are " + findmax(candles) + "<br>");
+    document.writeln(" There are " + birthdayCakeCandles(candles) + " of them");
+    //function
+    function birthdayCakeCandles(array) {
+        let max = findmax(array);
+        let count =0;
+        for (let j=0; j<array.length;j++){
+            if (array[j] == max){
+                count++;
+            }
+        }
+        return count;
+    }
+    function findmax(array) {
+        let max = array[0];
+        for (let j=1; j<array.length;j++){
+            if (max < array[j]){
+                max = array[j];
+            }
+        }
+        return max;
+    }
+</script>
+</body>
+</html>

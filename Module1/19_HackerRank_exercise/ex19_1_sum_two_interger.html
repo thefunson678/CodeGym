@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sum two number</title>
+</head>
+<body>
+<button type="button" onclick="solveMeFirst()">Let go</button>
+<script>
+    function checkinteger(val) {
+        if (val % 1 === 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    function sumtogether(a,b) {
+        return (a+b);
+    }
+    function solveMeFirst() {
+        let a;
+        let b;
+        let sum;
+        do {
+            a = +prompt("Nhập số a là số nguyên:");
+        } while (!checkinteger(a));
+        do {
+            b = +prompt("Nhập số b là số nguyên:");
+        } while (!checkinteger(b));
+        sum=sumtogether(a,b);
+        alert("Tổng của hai số là: " + sum)
+    }
+</script>
+</body>
+</html>

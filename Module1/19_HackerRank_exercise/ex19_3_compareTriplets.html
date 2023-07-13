@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>compareTriplets</title>
+</head>
+<body>
+<button type="button" onclick="compareTriplets()">Compare Triplets</button>
+<script>
+    function compareTriplets() {
+        let num = 0;
+        let alice = [];
+        let bob = [];
+        let triplets=[];
+        let bobmark=0;
+        let alicemark=0;
+        for (let i = 0; i < 3; i++) {
+            do {
+                num = +prompt("Nhập phần thử thứ " + (i + 1)+" và số nằm trong khoản 1-100");
+            } while (!(num >= 1 && num <= 100));
+            alice.push(num);
+            num = 0;
+        }
+        for (let i = 0; i < 3; i++) {
+            do {
+                num = +prompt("Nhập phần thử thứ " + (i + 1) + "và số nằm trong khoản 1-100");
+            } while (!(num >= 1 && num <= 100));
+            bob.push(num);
+            num = 0;
+        }
+        for (let i=0; i<3; i++){
+            if (alice[i] > bob[i]){
+                alicemark++;
+            } else if (alice[i] < bob[i]){
+                bobmark++;
+            }
+        }
+        triplets.push([alicemark,bobmark]);
+        return alert(triplets);
+    }
+</script>
+</body>
+</html>
