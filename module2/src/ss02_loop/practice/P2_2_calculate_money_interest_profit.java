@@ -1,6 +1,6 @@
 package ss02_loop.practice;
 import java.util.Scanner;
-public class P2_calculate_money_interest_profit {
+public class P2_2_calculate_money_interest_profit {
     public static void main(String[] args) {
         double money = 1.0;
         int month = 1;

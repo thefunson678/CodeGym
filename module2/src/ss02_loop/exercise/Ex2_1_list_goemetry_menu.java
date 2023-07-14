@@ -64,10 +64,19 @@ public class Ex2_1_list_goemetry_menu {
                     }
                 case 3:
                     System.out.println("Print isosceles triangle");
-                    for (int i = 1; i<=5; i++){
-                        for (int j = 1; i<=5; j++){
-//                            System.out.print(" ".repeat());
+                    int mid_min;
+                    int mid_max;
+                    for (int i = 1; i<=9; i+=2){
+                        mid_min = (9-i)/2+1;
+                        mid_max = (9-i)/2+i;
+                        for (int j = 1; j<=9;j++){
+                            if (j< mid_min || j > mid_max){
+                                System.out.print(" ");
+                            } else {
+                                System.out.print("*");
+                            }
                         }
+                        System.out.println();
                     }
                 case 4:
                     System.exit(0);

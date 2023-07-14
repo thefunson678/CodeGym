@@ -1,6 +1,6 @@
 package ss02_loop.practice;
 import java.util.Scanner;
-public class P1_check_prime_number {
+public class P2_1_check_prime_number {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the number: ");

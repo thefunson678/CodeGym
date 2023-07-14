@@ -1,6 +1,6 @@
 package ss02_loop.practice;
 import java.util.Scanner;
-public class P4_menu_application {
+public class P2_4_menu_application {
     public static void main(String[] args) {
         int choice = -1;
         Scanner input = new Scanner(System.in);

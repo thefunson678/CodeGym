@@ -120,31 +120,31 @@ public class Ex1_2_read_number_by_string {
                     read_text += "";
                     break;
                 case 1:
-                    read_text += " One";
+                    read_text += " one";
                     break;
                 case 2:
-                    read_text += " Two";
+                    read_text += " two";
                     break;
                 case 3:
-                    read_text += " Three";
+                    read_text += " three";
                     break;
                 case 4:
-                    read_text += " Four";
+                    read_text += " four";
                     break;
                 case 5:
-                    read_text += " Five";
+                    read_text += " five";
                     break;
                 case 6:
-                    read_text += " Six";
+                    read_text += " six";
                     break;
                 case 7:
-                    read_text += " Seven";
+                    read_text += " seven";
                     break;
                 case 8:
-                    read_text += " Eight";
+                    read_text += " eight";
                     break;
                 case 9:
-                    read_text += " Nine";
+                    read_text += " nine";
                     break;
                 default:
                     read_text += "Unknow!";
