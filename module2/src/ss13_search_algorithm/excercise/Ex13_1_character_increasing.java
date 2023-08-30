@@ -3,6 +3,7 @@ package ss13_search_algorithm.excercise;
 import java.util.*;
 
 class Ex13_1_character_increasing {
+    //Tìm kiếm nhị phân sử dụng đệ quy
     public static void main(String[] args) {
         String wordBeforeSort;
         String wordAfterSort;
