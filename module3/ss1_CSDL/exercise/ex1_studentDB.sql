@@ -10,4 +10,4 @@ id int auto_increment,
 nameTeacher varchar(45) null,
 age int,
 country varchar(45) null,
-primary key(id))
+primary key(id))	
