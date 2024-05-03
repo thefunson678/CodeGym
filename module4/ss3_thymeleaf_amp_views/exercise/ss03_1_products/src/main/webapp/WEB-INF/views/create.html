@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>List</title>
+    <link rel="stylesheet" type="text/css" href="/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<nav class="nav">
+    <a class="nav-link " href="/list">List</a>
+    <a class="nav-link " href="/create">Create</a>
+</nav>
+<body>
+<div class="container">
+    <h2>Create Production</h2>
+    <br>
+    <form action="/create" method="post" th:object="${product}">
+        <label>ID: </label><label th:text="${product.id}"></label>
+        <br>
+        <input class="form-control disabled" type="text" hidden="hidden" name="id" th:field="*{id}">
+        <label>Name</label>
+        <input class="form-control" type="text" name="name" th:field="*{name}">
+        <label>Price</label>
+        <input class="form-control" type="number" name="price" th:field="*{price}">
+        <label>Sold out: </label>
+        <input type="radio" th:field="*{banHet}" value="1">Sold out
+        <input type="radio" th:field="*{banHet}" value="0">Stocking
+        <br>
+        <label>Date Expiration</label>
+        <input class="form-control" type="date" name="expressDate" th:field="*{expressDate}">
+        <br>
+        <label>Description</label>
+        <textarea class="form-control" name="description" th:field="*{description}"></textarea>
+        <br>
+        <button type="submit">Save</button>
+    </form>
+</div>
+
+<script type="text/javascript" src="/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
